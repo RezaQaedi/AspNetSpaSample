@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active"ariaCurrentWhenActive="page">Task</a></li>
+    <li><a routerLink="/login" routerLinkActive="active"ariaCurrentWhenActive="page">Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active"ariaCurrentWhenActive="page">Register</a></li>
+  </ul>
+</nav>
+
+<div *ngIf="username; else elseBlock">
+  hello  <span style="color: blue; margin:5px;">{{username}}</span>
+  <button (click)="logout()">Logout</button>
+</div>
+<ng-template #elseBlock>hey you!</ng-template>
+
+<router-outlet></router-outlet>
