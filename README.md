@@ -1,2 +1,2 @@
 # AspNetSpaSample
-asp.net core as identity server Hosting angular app for loging and register page  
+asp.net core as identity server Hosting angular app for login and register page  
