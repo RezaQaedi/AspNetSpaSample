@@ -7,7 +7,7 @@ namespace AspCoreSpaSample.Endpoints
     {
         public static async Task<IResult> Handler([FromBody] LoginForm form, SignInManager<IdentityUser> signInManager)
         {
-            var result = await signInManager.PasswordSignInAsync(form.UserName!, form.Passoword!, true, false);
+            var result = await signInManager.PasswordSignInAsync(form.UserName!, form.Password!, true, false);
 
             if (result.Succeeded)
             {

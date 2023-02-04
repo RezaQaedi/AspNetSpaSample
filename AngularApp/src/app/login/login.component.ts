@@ -12,13 +12,13 @@ export class LoginComponent {
 
   }
 
-  userName: any = "";
-  password: any = "";
+  UserName: any = "";
+  Password: any = "";
 
   login() {
     return this.auth.login({
-      userName: this.userName,
-      password : this.password,
+      userName: this.UserName,
+      password : this.Password,
     })
   }
 }
