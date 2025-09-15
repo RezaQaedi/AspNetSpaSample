@@ -8,8 +8,6 @@ jobs:
       - name: Test DB_CONNECTION Secret
         shell: pwsh
         run: |
-          if ([string]::IsNullOrEmpty('${{ secrets.DB_CONNECTION }}')) {
-            Write-Host "Secret is EMPTY"
-          } else {
-            Write-Host "Secret is SET"
-          }
+            $secret = '${{ secrets.DB_CONNECTION }}'
+            $length = $secret.Length
+            Write-Host "DB_CONNECTION secret length: $length characters"
