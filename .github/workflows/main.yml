@@ -1,0 +1,15 @@
+name: Test Secret
+on: workflow_dispatch
+
+jobs:
+  check-secret:
+    runs-on: windows-latest
+    steps:
+      - name: Test DB_CONNECTION Secret
+        shell: pwsh
+        run: |
+          if ([string]::IsNullOrEmpty('${{ secrets.DB_CONNECTION }}')) {
+            Write-Host "Secret is EMPTY"
+          } else {
+            Write-Host "Secret is SET"
+          }
