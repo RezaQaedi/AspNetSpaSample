@@ -5,9 +5,9 @@ jobs:
   check-secret:
     runs-on: windows-latest
     steps:
-      - name: Test DB_CONNECTION Secret
+      - name: Test Secret
         shell: pwsh
         run: |
-            $secret = '${{ secrets.DB_CONNECTION }}'
-            $length = $secret.Length
-            Write-Host "DB_CONNECTION secret length: $length characters"
+          $secret = '${{ secrets.DB_CONNECTION }}'
+          $length = $secret.Length
+          Write-Host "DB_CONNECTION secret length: $length characters"
